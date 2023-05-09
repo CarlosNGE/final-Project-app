@@ -20,6 +20,11 @@
     margin-right: auto;
 }
 
+#searchbtn{
+    font-size: 16px;
+    margin-right: 2rem;
+}
+
 .form{
     font-size: 20px;
 }

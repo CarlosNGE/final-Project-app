@@ -149,6 +149,38 @@ const typeCard = () =>{
 
 }
 
+const searchCard = () =>{
+
+    let cardName = document.getElementById("cardname");
+    let searchBtn = document.getElementById("searchbtn");
+    let searchResult = document.getElementById("yugiohcard");
+
+    
+
+    //Fetching randome Yu-Gi-Oh Cards
+    fetch ("https://db.ygoprodeck.com/api/v7/cardinfo.php")
+    .then(response => response.json())
+    .then(cards => {
+        
+        let cardName = cards.data[randome].name;
+
+        if(cardName.length <=0) {
+            searchResult.iinerHTML = `<h2 class="msg>Please enter a card name</h2>`;
+        }
+
+        else
+    
+    
+       
+        
+    
+    })
+    .catch(err => {
+    console.error(err.message);
+    });
+    
+    }
+
 
 
 
