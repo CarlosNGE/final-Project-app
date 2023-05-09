@@ -43,6 +43,10 @@ const types = [
         dropdown.append(myOption);
     });
 
+    
+
+
+
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
@@ -58,23 +62,42 @@ const randomeCard = () =>{
 
             const nameCard = document.createElement("h2");
             nameCard.textContent = cards.data[randome].name;
+            nameCard.className = "cardtitle";
 
             const descCard = document.createElement("p");
             descCard.textContent = cards.data[randome].desc;
+            descCard.className = "carddesc";
 
             let imgCard = document.createElement("img");
             imgCard.src = cards.data[randome].card_images[0].image_url;
+            imgCard.className = "cardimg";
 
             let typCard = document.createElement("p");
             typCard.textContent = cards.data[randome].type;
+            typCard.className = "cardtype";
+
+            let atkCard = document.createElement("p")
+            atkCard.textContent = cards.data[randome].atk;
+            atkCard.className = "atkpower";
+
+            let defCard = document.createElement("p")
+            defCard.textContent = cards.data[randome].def;
+            defCard.className = "defpower";
+
 
             const cardElement = document.getElementById("yugiohcard");
             cardElement.innerHTML = "";
+
+            
             
             cardElement.appendChild(nameCard);
             cardElement.appendChild(descCard);
             cardElement.appendChild(imgCard);
             cardElement.appendChild(typCard);
+            cardElement.appendChild(atkCard);
+            cardElement.appendChild(defCard);
+
+            
 
             console.log(cards.data[0].name);
 
@@ -89,17 +112,31 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
 
 /////////////
 
-// const typeCard = () =>{
+const typeCard = () =>{
 
     
 
-// //Fetching randome Yu-Gi-Oh Cards
+//Fetching randome Yu-Gi-Oh Cards
 // fetch ("https://db.ygoprodeck.com/api/v7/cardinfo.php")
 // .then(response => response.json())
 // .then(cards => {
     
+//     dropdown.addEventListener('change', (e) => {
+//         let code = (e.target.card.data[randome].typevalue);
+//         let members = cards(code);
+//         let container = document.getElementById('typecards');
         
+//         container.innerHTML = "";
+        
+        
+//         members.forEach(card => {
+//           let iteam = document.createElement('LI');
+//           iteam.innerText = card;
+//           container.append(iteam);
+//         });
+//       });
     
+//       console.log(iteam);
 
 
    
@@ -110,7 +147,7 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
 //     console.error(err.message);
 // });
 
-// }
+}
 
 
 
