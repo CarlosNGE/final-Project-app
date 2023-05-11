@@ -158,20 +158,45 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
 
 
           const card1 = res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url;
-          console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
-          console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
-          console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
-          console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
+          // console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
+          // console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
+          // console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
+          // console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
+
+          
           
           //create a loop
+
+          // let imgCard = document.createElement("img");
+          //   imgCard.src = res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url;
+          //   imgCard.className = "cardimg";
+
+          //   let nameCard = document.createElement("h2");
+          //   nameCard.textContent = card1.name;
+          //   nameCard.className = "cardtitle";
 
           const cardElement = document.getElementById("yugiohcard");
           cardElement.innerHTML = "";
 
-         let c1 = document.createElement("img");
-         c1.src = card1;
 
-         cardElement.appendChild(c1);
+
+          let c1 = document.createElement("img");
+          c1.src = card1;
+
+          let c1name =document.createElement("h2");
+          c1name.textContent = res.data[Math.round(Math.random() * res.data.length)].name;
+          
+
+          console.log(c1);
+          console.log(res.data[Math.round(Math.random() * res.data.length)].name);
+         
+
+          cardElement.append(c1);
+          cardElement.append(c1name);
+
+          
+
+         
 
 
          
