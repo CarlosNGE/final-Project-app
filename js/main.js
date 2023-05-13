@@ -158,12 +158,13 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
 
           const myRam = Math.round(Math.random() * res.data.length);
           const myRam2 = Math.round(Math.random() * res.data.length);
+          const myRam3 = Math.round(Math.random() * res.data.length);
           
 
 
           const card1 = res.data[myRam].card_images[0].image_url;
           const card2 = res.data[myRam2].card_images[0].image_url;
-          // console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
+          const card3 = res.data[myRam3].card_images[0].image_url;
           // console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
           // console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
 
@@ -192,7 +193,15 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
           c1Desc.textContent = res.data[myRam].desc;
           c1Desc.className = "carddesc";
 
-          //Card 22
+          const c1Atk = document.createElement("p");
+          c1Atk.textContent = res.data[myRam].atk;
+          c1Atk.className = "atkpower";
+
+          const c1Def = document.createElement("p");
+          c1Def.textContent = res.data[myRam].def;
+          c1Def.className = "defpower";
+
+          //Card 2
 
           let c2 =document.createElement("img");
           c2.src = card2;
@@ -201,6 +210,49 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
           const c2Name = document.createElement("h2");
           c2Name.textContent = res.data[myRam2].name;
           c2Name.className = "cardtitle2";
+
+          const c2Type = document.createElement("p");
+          c2Type.textContent = res.data[myRam2].type;
+          c2Type.className = "cardtype2";
+
+          const c2Desc = document.createElement("p");
+          c2Desc.textContent = res.data[myRam2].desc;
+          c2Desc.className = "carddesc2";
+
+          const c2Atk = document.createElement("p");
+          c2Atk.textContent = res.data[myRam2].atk;
+          c2Atk.className = "atkpower2";
+
+          const c2Def = document.createElement("p");
+          c2Def.textContent = res.data[myRam2].def;
+          c2Def.className = "defpower2";
+
+          //Card 3
+
+          let c3 =document.createElement("img");
+          c3.src = card3;
+          c3.className = "cardimg3";
+
+          const c3Name = document.createElement("h2");
+          c3Name.textContent = res.data[myRam3].name;
+          c3Name.className = "cardtitle3";
+
+          const c3Type = document.createElement("p");
+          c3Type.textContent = res.data[myRam3].type;
+          c3Type.className = "cardtype3";
+
+          const c3Desc = document.createElement("p");
+          c3Desc.textContent = res.data[myRam3].desc;
+          c3Desc.className = "carddesc3";
+
+          const c3Atk = document.createElement("p");
+          c3Atk.textContent = res.data[myRam3].atk;
+          c3Atk.className = "atkpower3";
+
+          const c3Def = document.createElement("p");
+          c3Def.textContent = res.data[myRam3].def;
+          c3Def.className = "defpower3";
+
 
           
 
@@ -217,16 +269,31 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
           console.log(res.data[myRam].type);
           console.log(res.data[myRam].desc);
 
-          console.log(c2);
-          console.log(c2Name);
+          // console.log(c2);
+          // console.log(c2Name);
          
 
-          cardElement.append(c1);
-          cardElement.append(c2);
+          cardElement.append(c1);     
           cardElement.append(c1Name);
-          cardElement.append(c2Name);
           cardElement.append(c1Type);
           cardElement.append(c1Desc);
+          cardElement.append(c1Atk);
+          cardElement.append(c1Def);
+
+          cardElement.append(c2);
+          cardElement.append(c2Name);
+          cardElement.append(c2Type);
+          cardElement.append(c2Desc);
+          cardElement.append(c2Atk);
+          cardElement.append(c2Def);
+
+          cardElement.append(c3);
+          cardElement.append(c3Name);
+          cardElement.append(c3Type);
+          cardElement.append(c3Desc);
+          cardElement.append(c3Atk);
+          cardElement.append(c3Def);
+
 
           
 
