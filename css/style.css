@@ -62,13 +62,15 @@
     20% 20% 1fr 20%
     20% 20% 1fr 20%
     20% 20% 1fr 20%
-    20% 20% 1fr 20%;
+    20% 20% 1fr 20%
+    20% 20% 20% 1fr;
 }
 
 .cardimg,
 .cardimg2,
 .cardimg3,
-.cardimg4{
+.cardimg4,
+.cardimg5{
     border: solid 1px;
     margin-right: 3rem;
     grid-column: 1/2;
@@ -76,24 +78,34 @@
 }
 
 .cardimg2{
+    margin-top: 4rem;
     grid-column: 1/2;
     grid-row: 5/9;
 }
 
 .cardimg3{
+    margin-top: 4rem;
     grid-column: 1/2;
     grid-row: 9/13;
 }
 
 .cardimg4{
+    margin-top: 4rem;
     grid-column: 1/2;
     grid-row: 13/17;
+}
+
+.cardimg5{
+    margin-top: 4rem;
+    grid-column: 1/2;
+    grid-row: 18/22;
 }
 
 .cardtitle, 
 .cardtitle2,
 .cardtitle3,
-.cardtitle4{
+.cardtitle4,
+.cardtitle5{
     border: solid 1px;
     font-size: 2rem;
     grid-column: 2/4;
@@ -101,24 +113,34 @@
 }
 
 .cardtitle2{
+    margin-top: 4rem;
     grid-column: 2/4;
     grid-row: 5/6;
 }
 
 .cardtitle3{
+    margin-top: 4rem;
     grid-column: 2/4;
     grid-row: 9/10;
 }
 
 .cardtitle4{
+    margin-top: 4rem;
     grid-column: 2/4;
     grid-row: 13/14;
+}
+
+.cardtitle5{
+    margin-top: 4rem;
+    grid-column: 2/4;
+    grid-row: 18/19;
 }
 
 .cardtype,
 .cardtype2,
 .cardtype3,
-.cardtype4{
+.cardtype4,
+.cardtype5{
     font-size: 1.25rem;
     font-weight: bold;
     border: solid 1px;
@@ -141,10 +163,16 @@
     grid-row: 14/15;
 }
 
+.cardtype5{
+    grid-column: 2/4;
+    grid-row: 19/20;
+}
+
 .carddesc,
 .carddesc2,
 .carddesc3,
-.carddesc4{
+.carddesc4,
+.carddesc5{
     font-size: 1.25rem;
     border: solid 1px;
     grid-column: 2/4;
@@ -166,10 +194,16 @@
     grid-row: 15/16;
 }
 
+.carddesc5{
+    grid-column: 2/4;
+    grid-row: 20/21;
+}
+
 .atkpower,
 .atkpower2,
 .atkpower3,
-.atkpower4{
+.atkpower4,
+.atkpower5{
     font-size: 1.5rem;
     font-weight: bold;
     border: solid 1px;
@@ -192,10 +226,16 @@
     grid-row: 16/17;
 }
 
+.atkpower5{
+    grid-column: 2/3;
+    grid-row: 21/22;
+}
+
 .defpower,
 .defpower2,
 .defpower3,
-.defpower4{
+.defpower4,
+.defpower5{
     font-size: 1.5rem;
     font-weight: bold;
     border: solid 1px;
@@ -216,4 +256,9 @@
 .defpower4{
     grid-column: 3/4;
     grid-row: 16/17;
+}
+
+.defpower5{
+    grid-column: 3/4;
+    grid-row: 21/22;
 }

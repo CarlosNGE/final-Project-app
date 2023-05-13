@@ -160,6 +160,7 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
           const myRam2 = Math.round(Math.random() * res.data.length);
           const myRam3 = Math.round(Math.random() * res.data.length);
           const myRam4 = Math.round(Math.random() * res.data.length);
+          const myRam5 = Math.round(Math.random() * res.data.length);
           
 
 
@@ -167,7 +168,7 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
           const card2 = res.data[myRam2].card_images[0].image_url;
           const card3 = res.data[myRam3].card_images[0].image_url;
           const card4 = res.data[myRam4].card_images[0].image_url;
-          // console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
+          const card5 = res.data[myRam5].card_images[0].image_url;
 
           
           //create a loop
@@ -280,6 +281,32 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
           c4Def.textContent = res.data[myRam4].def;
           c4Def.className = "defpower4";
 
+          //Card 5
+
+          let c5 =document.createElement("img");
+          c5.src = card5;
+          c5.className = "cardimg5";
+
+          const c5Name = document.createElement("h2");
+          c5Name.textContent = res.data[myRam5].name;
+          c5Name.className = "cardtitle5";
+
+          const c5Type = document.createElement("p");
+          c5Type.textContent = res.data[myRam5].type;
+          c5Type.className = "cardtype5";
+
+          const c5Desc = document.createElement("p");
+          c5Desc.textContent = res.data[myRam5].desc;
+          c5Desc.className = "carddesc5";
+
+          const c5Atk = document.createElement("p");
+          c5Atk.textContent = res.data[myRam5].atk;
+          c5Atk.className = "atkpower5";
+
+          const c5Def = document.createElement("p");
+          c5Def.textContent = res.data[myRam5].def;
+          c5Def.className = "defpower5";
+
 
           
 
@@ -327,6 +354,13 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
           cardElement.append(c4Desc);
           cardElement.append(c4Atk);
           cardElement.append(c4Def);
+
+          cardElement.append(c5);
+          cardElement.append(c5Name);
+          cardElement.append(c5Type);
+          cardElement.append(c5Desc);
+          cardElement.append(c5Atk);
+          cardElement.append(c5Def);
 
 
           
