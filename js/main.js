@@ -29,19 +29,19 @@ const types = [
     },
   ];
 
-  let dropdown = document.getElementById("type");
+  // let dropdown = document.getElementById("type");
 
-    // loop through array and create an option tag
-    //with the data from the objects
+  //   // loop through array and create an option tag
+  //   //with the data from the objects
 
-    types.forEach(type =>{
-        let myOption = document.createElement('OPTION');
-        myOption.value = type.code;
-        let name = type.name;
-        myOption.innerHTML = name;
+  //   types.forEach(type =>{
+  //       let myOption = document.createElement('OPTION');
+  //       myOption.value = type.code;
+  //       let name = type.name;
+  //       myOption.innerHTML = name;
     
-        dropdown.append(myOption);
-    });
+  //       dropdown.append(myOption);
+  //   });
 
     
 
@@ -99,7 +99,7 @@ const randomeCard = () =>{
 
             
 
-            console.log(cards.data[0].name);
+            console.log(cards.data[randome].name);
 
         })
         .catch(err => {
@@ -110,81 +110,149 @@ const randomeCard = () =>{
 
 document.getElementById("cardButton").addEventListener("click", randomeCard);
 
-/////////////
 
-const typeCard = () =>{
 
-    
 
-//Fetching randome Yu-Gi-Oh Cards
-// fetch ("https://db.ygoprodeck.com/api/v7/cardinfo.php")
-// .then(response => response.json())
-// .then(cards => {
-    
-//     dropdown.addEventListener('change', (e) => {
-//         let code = (e.target.card.data[randome].typevalue);
-//         let members = cards(code);
-//         let container = document.getElementById('typecards');
+
+
+///////////////////////////////////////////////////////////////////////
+
+//const typeCard = () =>{
+
+    //let cards = [];
+
+    // //Fetching type Yu-Gi-Oh Cards
+    // fetch ("https://db.ygoprodeck.com/api/v7/cardinfo.php")
+    // .then((response) => response.json())
+    // .then((data) => {
+
+    //   cards = data;
+      
+      
+
+      types.forEach((item) => {
+        // console.log(item.name);
+        const option = document.createElement("OPTION");
+        option.value = item.name;
+        option.innerText = item.name;
         
-//         container.innerHTML = "";
-        
-        
-//         members.forEach(card => {
-//           let iteam = document.createElement('LI');
-//           iteam.innerText = card;
-//           container.append(iteam);
-//         });
-//       });
-    
-//       console.log(iteam);
+        type.appendChild(option); 
+      });    
+    //})   
 
-
-   
+    // .catch(err => {
+    //     console.error(err.message);
+    // });
     
 
-// })
-// .catch(err => {
-//     console.error(err.message);
-// });
+     // DOM ref to the select dropdown
+     let card = document.getElementById("type");
+
+     card.addEventListener("change", (e) => {
+
+      const cardType = e.target.value;
+
+      fetch("https://db.ygoprodeck.com/api/v7/cardinfo.php?type=" + cardType )
+        .then(response => response.json())
+        .then(res => {
+
+          const myRam = Math.round(Math.random() * res.data.length);
+          const myRam2 = Math.round(Math.random() * res.data.length);
+          
+
+
+          const card1 = res.data[myRam].card_images[0].image_url;
+          const card2 = res.data[myRam2].card_images[0].image_url;
+          // console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
+          // console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
+          // console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
+
+          
+          //create a loop
+
+
+          const cardElement = document.getElementById("yugiohcard");
+          cardElement.innerHTML = "";
+
+          // Card 1
+
+          let c1 = document.createElement("img");
+          c1.src = card1;
+          c1.className = "cardimg";
+
+          const c1Name = document.createElement("h2");
+          c1Name.textContent = res.data[myRam].name;
+          c1Name.className = "cardtitle";
+
+          const c1Type = document.createElement("p");
+          c1Type.textContent = res.data[myRam].type;
+          c1Type.className = "cardtype";
+
+          const c1Desc = document.createElement("p");
+          c1Desc.textContent = res.data[myRam].desc;
+          c1Desc.className = "carddesc";
+
+          //Card 2
+
+          let c2 =document.createElement("img");
+          c2.src = card2;
+          c2.className = "cardimg2";
+
+          const c2Name = document.createElement("h2");
+          c2Name.textContent = res.data[myRam2].name;
+          c2Name.className = "cardtitle2";
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          console.log(c1);
+          console.log(res.data[myRam].name);
+          console.log(res.data[myRam].type);
+          console.log(res.data[myRam].desc);
+
+          console.log(c2);
+          console.log(c2Name);
+         
+
+          cardElement.append(c1);
+          cardElement.append(c2);
+          cardElement.append(c1Name);
+          cardElement.append(c2Name);
+          cardElement.append(c1Type);
+          cardElement.append(c1Desc);
+
+          
+
+         
+
+
+         
+
+        })
+
+        
+
+      const id = e.target.value;
+      
+      // console.log(id);
+
+
+     });
+
+
 
 }
 
-const searchCard = () =>{
-
-    let cardName = document.getElementById("cardname");
-    let searchBtn = document.getElementById("searchbtn");
-    let searchResult = document.getElementById("yugiohcard");
-
-    
-
-    //Fetching randome Yu-Gi-Oh Cards
-    fetch ("https://db.ygoprodeck.com/api/v7/cardinfo.php")
-    .then(response => response.json())
-    .then(cards => {
-        
-        let cardName = cards.data[randome].name;
-
-        if(cardName.length <=0) {
-            searchResult.iinerHTML = `<h2 class="msg>Please enter a card name</h2>`;
-        }
-
-        else
-    
-    
-       
-        
-    
-    })
-    .catch(err => {
-    console.error(err.message);
-    });
-    
-    }
 
 
 
-
-
-}
+//}
 
 
