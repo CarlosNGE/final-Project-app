@@ -159,13 +159,14 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
           const myRam = Math.round(Math.random() * res.data.length);
           const myRam2 = Math.round(Math.random() * res.data.length);
           const myRam3 = Math.round(Math.random() * res.data.length);
+          const myRam4 = Math.round(Math.random() * res.data.length);
           
 
 
           const card1 = res.data[myRam].card_images[0].image_url;
           const card2 = res.data[myRam2].card_images[0].image_url;
           const card3 = res.data[myRam3].card_images[0].image_url;
-          // console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
+          const card4 = res.data[myRam4].card_images[0].image_url;
           // console.log(res.data[Math.round(Math.random() * res.data.length)].card_images[0].image_url);
 
           
@@ -253,6 +254,32 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
           c3Def.textContent = res.data[myRam3].def;
           c3Def.className = "defpower3";
 
+          //Card 4
+
+          let c4 =document.createElement("img");
+          c4.src = card4;
+          c4.className = "cardimg4";
+
+          const c4Name = document.createElement("h2");
+          c4Name.textContent = res.data[myRam4].name;
+          c4Name.className = "cardtitle4";
+
+          const c4Type = document.createElement("p");
+          c4Type.textContent = res.data[myRam4].type;
+          c4Type.className = "cardtype4";
+
+          const c4Desc = document.createElement("p");
+          c4Desc.textContent = res.data[myRam4].desc;
+          c4Desc.className = "carddesc4";
+
+          const c4Atk = document.createElement("p");
+          c4Atk.textContent = res.data[myRam4].atk;
+          c4Atk.className = "atkpower4";
+
+          const c4Def = document.createElement("p");
+          c4Def.textContent = res.data[myRam4].def;
+          c4Def.className = "defpower4";
+
 
           
 
@@ -293,6 +320,13 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
           cardElement.append(c3Desc);
           cardElement.append(c3Atk);
           cardElement.append(c3Def);
+
+          cardElement.append(c4);
+          cardElement.append(c4Name);
+          cardElement.append(c4Type);
+          cardElement.append(c4Desc);
+          cardElement.append(c4Atk);
+          cardElement.append(c4Def);
 
 
           

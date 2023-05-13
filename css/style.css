@@ -61,12 +61,14 @@
     grid-template-rows: 
     20% 20% 1fr 20%
     20% 20% 1fr 20%
+    20% 20% 1fr 20%
     20% 20% 1fr 20%;
 }
 
 .cardimg,
 .cardimg2,
-.cardimg3{
+.cardimg3,
+.cardimg4{
     border: solid 1px;
     margin-right: 3rem;
     grid-column: 1/2;
@@ -83,9 +85,15 @@
     grid-row: 9/13;
 }
 
+.cardimg4{
+    grid-column: 1/2;
+    grid-row: 13/17;
+}
+
 .cardtitle, 
 .cardtitle2,
-.cardtitle3{
+.cardtitle3,
+.cardtitle4{
     border: solid 1px;
     font-size: 2rem;
     grid-column: 2/4;
@@ -102,9 +110,15 @@
     grid-row: 9/10;
 }
 
+.cardtitle4{
+    grid-column: 2/4;
+    grid-row: 13/14;
+}
+
 .cardtype,
 .cardtype2,
-.cardtype3{
+.cardtype3,
+.cardtype4{
     font-size: 1.25rem;
     font-weight: bold;
     border: solid 1px;
@@ -122,9 +136,15 @@
     grid-row: 10/11;
 }
 
+.cardtype4{
+    grid-column: 2/4;
+    grid-row: 14/15;
+}
+
 .carddesc,
 .carddesc2,
-.carddesc3{
+.carddesc3,
+.carddesc4{
     font-size: 1.25rem;
     border: solid 1px;
     grid-column: 2/4;
@@ -141,9 +161,15 @@
     grid-row: 11/12;
 }
 
+.carddesc4{
+    grid-column: 2/4;
+    grid-row: 15/16;
+}
+
 .atkpower,
 .atkpower2,
-.atkpower3{
+.atkpower3,
+.atkpower4{
     font-size: 1.5rem;
     font-weight: bold;
     border: solid 1px;
@@ -161,9 +187,15 @@
     grid-row: 12/13;
 }
 
+.atkpower4{
+    grid-column: 2/3;
+    grid-row: 16/17;
+}
+
 .defpower,
 .defpower2,
-.defpower3{
+.defpower3,
+.defpower4{
     font-size: 1.5rem;
     font-weight: bold;
     border: solid 1px;
@@ -179,4 +211,9 @@
 .defpower3{
     grid-column: 3/4;
     grid-row: 12/13;
+}
+
+.defpower4{
+    grid-column: 3/4;
+    grid-row: 16/17;
 }
