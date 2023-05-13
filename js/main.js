@@ -192,7 +192,7 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
           c1Desc.textContent = res.data[myRam].desc;
           c1Desc.className = "carddesc";
 
-          //Card 2
+          //Card 22
 
           let c2 =document.createElement("img");
           c2.src = card2;
