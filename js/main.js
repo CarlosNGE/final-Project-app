@@ -109,25 +109,25 @@ const randomeCard = () =>{
 
 };
 
-document.getElementById("cardButton").addEventListener("click", randomeCard);
+      document.getElementById("cardButton").addEventListener("click", randomeCard);
 
 
 
 
 
 
-///////////////////////////////////////////////////////////////////////
+      ///////////////////////////////////////////////////////////////////////
 
-//const typeCard = () =>{
+      //const typeCard = () =>{
 
-    //let cards = [];
+      //let cards = [];
 
-    // //Fetching type Yu-Gi-Oh Cards
-    // fetch ("https://db.ygoprodeck.com/api/v7/cardinfo.php")
-    // .then((response) => response.json())
-    // .then((data) => {
+      // //Fetching type Yu-Gi-Oh Cards
+      // fetch ("https://db.ygoprodeck.com/api/v7/cardinfo.php")
+      // .then((response) => response.json())
+      // .then((data) => {
 
-    //   cards = data;
+      //   cards = data;
       
       
 
@@ -139,11 +139,11 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
         
         type.appendChild(option); 
       });    
-    //})   
+      //})   
 
-    // .catch(err => {
-    //     console.error(err.message);
-    // });
+      // .catch(err => {
+      //     console.error(err.message);
+      // });
     
 
      // DOM ref to the select dropdown
@@ -474,7 +474,69 @@ document.getElementById("cardButton").addEventListener("click", randomeCard);
 
      });
 
+         ///////////////////////////////////////////////////
 
+     let cardNames = document.getElementById("cardname");
+     let searchBtns = document.getElementById("searchbtn");
+     let result = document.getElementById("yugiohcard");
+
+     let getCard = () => {
+        let cardNameS = cardNames.value;
+        let url = `https://db.ygoprodeck.com/api/v7/cardinfo.php?name=${cardNameS}`;
+
+        if (cardNameS.length <= 0) {
+          result.innerHTML = `<h3 class="mgs">Please Enter A Card Name</h3>`;
+        }
+
+        else{
+          fetch(url)
+            .then((resp) => resp.json())
+            .then((res) =>{
+
+            const nameCard = document.createElement("h2");
+            nameCard.textContent = res.data[0].name;
+            nameCard.className = "cardtitle";
+
+            const descCard = document.createElement("p");
+            descCard.textContent = res.data[0].desc;
+            descCard.className = "carddesc";
+
+            let imgCard = document.createElement("img");
+            imgCard.src = res.data[0].card_images[0].image_url;
+            imgCard.className = "cardimg";
+
+            let typCard = document.createElement("p");
+            typCard.textContent = res.data[0].type;
+            typCard.className = "cardtype";
+
+            let atkCard = document.createElement("p")
+            atkCard.textContent = res.data[0].atk;
+            atkCard.className = "atkpower";
+
+            let defCard = document.createElement("p")
+            defCard.textContent = res.data[0].def;
+            defCard.className = "defpower";
+
+              const cardElement = document.getElementById("yugiohcard");
+              cardElement.innerHTML = "";
+
+              cardElement.appendChild(nameCard);
+              cardElement.appendChild(descCard);
+              cardElement.appendChild(imgCard);
+              cardElement.appendChild(typCard);
+              cardElement.appendChild(atkCard);
+              cardElement.appendChild(defCard);
+              
+
+              console.log(res);
+              console.log(res.data[0].card_images[0].image_url)
+            });
+        }
+     };
+
+     searchBtns.addEventListener("click", getCard);
+
+     window.addEventListener("load", getCard);
 
 }
 
