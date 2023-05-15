@@ -58,12 +58,7 @@
     justify-content: center;
     justify-self: center;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 
-    20% 20% 1fr 20%
-    20% 20% 1fr 20%
-    20% 20% 1fr 20%
-    20% 20% 1fr 20%
-    20% 20% 20% 1fr;
+    grid-template-rows: 20% 20% 1fr 20%;
 }
 
 .cardimg,
@@ -318,4 +313,24 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 
     20% 20% 1fr 20%;
+}
+
+#randomcards{
+    background-color: bisque;
+    border: solid 1px;
+    width: 1000px;
+    border: solid 1px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#randomcards img{
+    width: 250px;
 }
