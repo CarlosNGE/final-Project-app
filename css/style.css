@@ -4,6 +4,11 @@
     list-style: none;
     box-sizing: border-box;
     
+    
+}
+
+html{
+    background-color: azure;
 }
 
 
@@ -276,10 +281,9 @@
 }
 
 .popup{
-    border: solid 2px;
     border-radius: 10px;
     margin: 0;
-    width: 1000px;
+    width: 1100px;
     background: #ff3;
     position: fixed;
     top: 50%;
@@ -300,6 +304,10 @@
     visibility: visible;
     top: 50%;
     transform: translate(-50%,-50%);
+    /* transform: translate3d(0, -50%, 0); */
+    box-shadow: 2px 2px 8px rgba(0, 4, 0, 0.75);
+    background: white;
+    border-radius: 10px;
 
 
 }
@@ -307,7 +315,16 @@
 
 
 #closepop{
+    word-spacing: 15px;
+    background-color: rgb(200, 156, 75);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    margin-top: 1rem;
     font-size: 20px;
+    font-weight: bolder;
+    position: relative;
+    left: 92%;
 }
 
 .info{
@@ -328,7 +345,7 @@
 #randomcards{
     position: relative;
     z-index: 1;
-    background-color: bisque;
+    background-color: white;
     border: solid 1px;
     width: 1000px;
     border: solid 1px;
@@ -337,7 +354,7 @@
     margin-left: auto;
     margin-right: auto;
     display: grid;
-    justify-content: center;
+    justify-content: space-between;
     justify-self: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -345,6 +362,7 @@
 
 #randomcards img{
     width: 250px;
+    margin: 2rem;
 }
 
 .footer{
