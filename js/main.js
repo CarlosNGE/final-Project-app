@@ -460,6 +460,9 @@ const randomeCard = () =>{
           randomContainer.append(c4);
           randomContainer.append(c5);
           randomContainer.append(c6);
+
+          let img1 = document.getElementById("god1");
+          img1.setAttribute("style", "bottom:0%");
           
           
 
@@ -526,6 +529,12 @@ const randomeCard = () =>{
               cardElement.appendChild(typCard);
               cardElement.appendChild(atkCard);
               cardElement.appendChild(defCard);
+
+              let img1 = document.getElementById("god1");
+              img1.setAttribute("style", "bottom:0");
+
+              const randomContainer =document.getElementById("randomcards");
+              randomContainer.innerHTML = "";
               
 
               console.log(res);
@@ -537,6 +546,10 @@ const randomeCard = () =>{
      searchBtns.addEventListener("click", getCard);
 
      window.addEventListener("load", getCard);
+
+     /////////////////////////////////
+
+     
 
 }
 
