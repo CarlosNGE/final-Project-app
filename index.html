@@ -20,19 +20,22 @@
         
         
         <form class="form">
-            <label for="type">Type: </label> 
+            <label for="type">Type : </label> 
               <select name="type" id="type">
-            <option value="" selected>Select a Type</option> 
+            <option class="drop" value="" selected>Select a Type</option> 
               </select>
         </form>
-        <button id="cardButton">Randome card</button>
+        <button id="cardButton">Random card</button>
 
-        <div>
-            <input type="text" placeholder="Enter card name" id="cardname">
-            <button id="searchbtn">Search</button>
-        </div>
+        
     </section>
-        <section>
+
+    <div class="searchbar">
+        <input type="text" placeholder="  Enter card name" id="cardname">
+        <button id="searchbtn">Search</button>
+    </div>
+
+    <section>
         <section id="yugiohcard"></section>
         <section id="randomcards"></section>
         

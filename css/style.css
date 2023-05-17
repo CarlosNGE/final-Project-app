@@ -8,7 +8,7 @@
 }
 
 html{
-    background-color: azure;
+    background-color: rgb(242, 242, 242);
 }
 
 
@@ -19,47 +19,82 @@ html{
 
 .logo{
     border: solid 1px;
-    width: 400px;
+    width: 250px;
     display: block;
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
 }
 
+
 #searchbtn{
+    width: 120px;
     font-size: 16px;
-    margin-right: 2rem;
+    margin-right: 0rem;
+    cursor: pointer;
+    padding: 6rem;
+    word-spacing: 15px;
+    background-color: rgb(190, 55, 55);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
 }
 
 .form{
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #type{
+    border: solid .5px rgb(167, 167, 167);
+    border-radius: 5px;
+    padding: 1px;
+    margin-top: 0.3rem;
+    cursor: pointer;
     font-size: 15px;
-    margin-right: 3rem;
+    margin-right: 1.5rem;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.drop{
+    
 }
 
 .btn{
     font-size: 25px;
-    margin: 4rem;
+    margin: 2rem 1rem 1rem 1rem;
     display: flex;
     justify-content: center;
-    
 }
 
 #cardButton{
-    margin-right: 2rem;
+    
     font-size: 1rem;
+    cursor: pointer;
+    word-spacing: 1px;
+    background-color: rgb(190, 55, 55);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+}
+
+.searchbar{
+    display: flex;
+    justify-content: center;
+
 }
 
 #yugiohcard{
+    background:#ffffff;
     position: relative;
+    /* border-radius: 10px; */
+    border-radius: 10px;
     z-index: 1;
     width: 1000px;
-    border: solid 1px;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 0.75rem;
     margin-left: auto;
     margin-right: auto;
     display: grid;
@@ -74,13 +109,17 @@ html{
 .cardimg3,
 .cardimg4,
 .cardimg5{
-    border: solid 1px;
-    margin-right: 3rem;
+    cursor: pointer;
+    padding: 1.5rem;
+    /* border: solid 1px; */
+    border-radius: 40px;
+    margin-right: 1rem;
     grid-column: 1/2;
     grid-row: 1/5;
 }
 
 .cardimg2{
+    cursor: pointer;
     margin-top: 4rem;
     grid-column: 1/2;
     grid-row: 5/9;
@@ -109,8 +148,11 @@ html{
 .cardtitle3,
 .cardtitle4,
 .cardtitle5{
+    padding-left: 0.5rem;
+    margin-right: 2rem;
     background-color: white;
-    border: solid 1px;
+    border: solid rgb(167, 167, 167) 1px;
+    border-radius: 10px;
     font-size: 2rem;
     grid-column: 2/4;
     grid-row: 1/2;
@@ -145,10 +187,13 @@ html{
 .cardtype3,
 .cardtype4,
 .cardtype5{
+    padding-left: 0.5rem;
     background-color: white;
+    margin-right: 2rem;
     font-size: 1.25rem;
     font-weight: bold;
-    border: solid 1px;
+    border: solid rgb(167, 167, 167) 1px;
+    border-radius: 7px;
     grid-column: 2/4;
     grid-row: 2/3;
 }
@@ -178,9 +223,12 @@ html{
 .carddesc3,
 .carddesc4,
 .carddesc5{
+    padding: 0.5rem;
     background-color: white;
+    margin-right: 2rem;
     font-size: 1.25rem;
-    border: solid 1px;
+    border: solid rgb(167, 167, 167) 1px;
+    border-radius: 7px;
     grid-column: 2/4;
     grid-row: 3/4;
 }
@@ -210,10 +258,13 @@ html{
 .atkpower3,
 .atkpower4,
 .atkpower5{
+    padding-left: 0.5rem;
     background-color: white;
+    margin-right: 2rem;
     font-size: 1.5rem;
     font-weight: bold;
-    border: solid 1px;
+    border: solid rgb(167, 167, 167) 1px;
+    border-radius: 7px;
     grid-column: 2/3;
     grid-row: 4/5;
 }
@@ -243,10 +294,13 @@ html{
 .defpower3,
 .defpower4,
 .defpower5{
+    padding-left: 0.5rem;
     background-color: white;
+    margin-right: 2rem;
     font-size: 1.5rem;
     font-weight: bold;
-    border: solid 1px;
+    border: solid rgb(167, 167, 167) 1px;
+    border-radius: 7px;
     grid-column: 3/4;
     grid-row: 4/5;
 }
@@ -283,7 +337,7 @@ html{
 .popup{
     border-radius: 10px;
     margin: 0;
-    width: 1100px;
+    width: 1000px;
     background: #ff3;
     position: fixed;
     top: 50%;
@@ -316,22 +370,26 @@ html{
 
 #closepop{
     word-spacing: 15px;
-    background-color: rgb(200, 156, 75);
+    background-color: rgb(190, 55, 55);
+    cursor: pointer;
     color: rgb(255, 255, 255);
     border-radius: 5px;
     padding: 5px 10px 5px 10px;
     margin-top: 1rem;
     font-size: 20px;
-    font-weight: bolder;
+    /* font-weight: bolder; */
+    font-size: 16px;
     position: relative;
-    left: 92%;
+    left: 95%;
+    cursor: pointer;
+    border: none;
 }
 
 .info{
     width: 900px;
-    border: solid 1px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    /* border: solid 1px; */
+    /* margin-top: 1rem;
+    margin-bottom: 1rem; */
     margin-left: auto;
     margin-right: auto;
     display: grid;
@@ -346,10 +404,11 @@ html{
     position: relative;
     z-index: 1;
     background-color: white;
-    border: solid 1px;
+    border-radius: 10px;
+    /* border: solid 1px; */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     width: 1000px;
-    border: solid 1px;
-    margin-top: 4rem;
+    margin-top: 0;
     margin-bottom: 4rem;
     margin-left: auto;
     margin-right: auto;
@@ -361,6 +420,8 @@ html{
 }
 
 #randomcards img{
+    cursor: pointer;
+    border-radius: 10px;
     width: 250px;
     margin: 2rem;
 }
@@ -376,22 +437,41 @@ html{
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 500px;
-    height: 350px;
+    width: 350px;
+    height: 250px;
 }
 
 .god2{
     position: fixed;
-    left: 35%;
+    left: 38%;
     bottom: 0;
-    width: 500px;
-    height: 300px;
+    width: 350px;
+    height: 250px;
 }
 
 .god3{
     position: fixed;
     right: 0;
     bottom: 0;
-    width: 500px;
-    height: 350px;
+    width: 400px;
+    height: 275px;
+}
+
+
+
+#cardname{
+    border: solid .5px rgb(167, 167, 167);
+    border-radius: 5px;
+    font-size: 15px;
+    width: 200px;
+}
+
+.mgs{
+    text-align: center;
+    /* border: solid 1px; */
+    font-size: 15px;
+    grid-column: 1/4;
+    grid-row: 1/2;
+
+    
 }
